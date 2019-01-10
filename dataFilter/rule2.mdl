@@ -1,5 +1,5 @@
 Model {
-  Name			  "rule1"
+  Name			  "rule2"
   Version		  9.1
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
@@ -10,6 +10,7 @@ Model {
       OutputFunctionCall      "off"
       SampleTime	      "-1"
       UnitExpr		      "inherit"
+      DataTypeExpr	      "double"
     }
     NumRootOutports	    1
     Outport {
@@ -19,7 +20,7 @@ Model {
       UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1"
+    ComputedModelVersion    "1.3"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -120,9 +121,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Hengyi"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Dec 31 17:41:02 2018"
-  RTWModifiedTimeStamp	  468178848
-  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  LastModifiedDate	  "Thu Jan 10 21:49:50 2019"
+  RTWModifiedTimeStamp	  469056895
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -178,12 +179,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "rule1"
-    overrideMode_	    [0U]
+    model_		    "rule2"
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "rule1"
+      Cell		      "rule2"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -233,11 +234,11 @@ Model {
 	  Version		  "1.18.0"
 	  DisabledProps		  []
 	  Description		  ""
-	  StartTime		  "0.0"
-	  StopTime		  "10.0"
+	  StartTime		  "0"
+	  StopTime		  "31.96"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  "on"
-	  FixedStep		  "auto"
+	  FixedStep		  "0.01"
 	  InitialStep		  "auto"
 	  MaxOrder		  5
 	  ZcThreshold		  "auto"
@@ -251,8 +252,8 @@ Model {
 	  RelTol		  "1e-3"
 	  EnableMultiTasking	  off
 	  ConcurrentTasks	  off
-	  Solver		  "VariableStepAuto"
-	  SolverName		  "VariableStepAuto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
 	  SolverJacobianMethodControl "auto"
 	  ShapePreserveControl	  "DisableAll"
 	  ZeroCrossControl	  "UseLocalSettings"
@@ -284,9 +285,9 @@ Model {
 	  LoadInitialState	  off
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
-	  SaveFormat		  "Dataset"
+	  SaveFormat		  "StructureWithTime"
 	  SignalLoggingSaveFormat "Dataset"
-	  SaveOutput		  on
+	  SaveOutput		  off
 	  SaveState		  off
 	  SignalLogging		  on
 	  DSMLogging		  on
@@ -294,7 +295,7 @@ Model {
 	  VisualizeSimOutput	  on
 	  StreamToWorkspace	  off
 	  StreamVariableName	  "streamout"
-	  SaveTime		  on
+	  SaveTime		  off
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
 	  TimeSaveName		  "tout"
@@ -1069,9 +1070,9 @@ Model {
     }
   }
   System {
-    Name		    "rule1"
+    Name		    "rule2"
     Location		    [685, 216, 1499, 749]
-    Open		    on
+    Open		    off
     PortBlocksUseCompactNotation off
     SetDomainSpec	    off
     DomainSpecType	    "Deduce"
@@ -1095,6 +1096,7 @@ Model {
       Position		      [125, 73, 155, 87]
       ZOrder		      1
       IconDisplay	      "Port number"
+      OutDataTypeStr	      "double"
     }
     Block {
       BlockType		      Constant
